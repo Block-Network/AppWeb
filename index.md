@@ -6,8 +6,7 @@
 - Oxygen11
 - Extension（ROG）
 - Realme UI
-- AOSP 
-- 部分类原生
+- AOSP
 #### 理论支持部分类原生
 
 ## 支持的音乐软件版本
