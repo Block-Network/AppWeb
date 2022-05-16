@@ -1,20 +1,18 @@
-name: Jekyll site CI
+name: Update Time
 
 on:
   push:
     branches: [ gh-pages ]
-  watch:
-    types: [started]
+  #watch:
+    #types: [started]
 jobs:
   build:
 
     runs-on: ubuntu-latest
 
     steps:
-     - name: Prepare artifact
-       if: success()
-       id: codeversion
+     - name: Update Time
        run: |
-          echo 123
+          echo $(TZ=UTC-8 date +%Y-%m-%d" "%H:%M:%S) > app/updateTime.txt
         
     
