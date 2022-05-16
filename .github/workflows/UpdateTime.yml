@@ -17,9 +17,10 @@ jobs:
 
     - name: Update Time
       run: |
+        cd AppWeb
         ls
         ls app
-        echo $(TZ=UTC-8 date +%Y-%m-%d" "%H:%M:%S) > AppWeb/app/updateTime.txt
+        echo $(TZ=UTC-8 date +%Y-%m-%d" "%H:%M:%S) > app/updateTime.txt
        
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
