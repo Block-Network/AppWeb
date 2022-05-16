@@ -12,7 +12,7 @@ jobs:
 
     steps:
     - name: Clone Pixiv_Spider
-      run |
+      run: |
         git clone https://github.com/Block-Network/AppWeb.git
 
     - name: Update Time
