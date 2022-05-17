@@ -26,7 +26,7 @@ jobs:
         cd AppWeb
         git config --global user.email xiaowine0@gmail.com
         git config --global user.name xiaowine
-        git add AppWeb/app/updateTime.txt
+        git add app/updateTime.txt
         git commit -m "updateTime" -a
 
     - name: Push changes
