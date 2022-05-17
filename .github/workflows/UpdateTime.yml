@@ -13,17 +13,17 @@ jobs:
     steps:
     - name: Clone Pixiv_Spider
       run: |
-        git clone https://github.com/Block-Network/AppWeb.git
+        git clone https://github.com/Block-Network/AppWeb.git ./
 
     - name: Update Time
       run: |
-        cd AppWeb
+
         echo $(TZ=UTC-8 date +%Y-%m-%d" "%H:%M:%S) > app/updateTime.txt
        
     
-    - name: Delete conflict
+    - name: Update Time
       run: |
-        cd AppWeb
+
         git config --global user.email xiaowine0@gmail.com
         git config --global user.name xiaowine
         git add app/updateTime.txt
