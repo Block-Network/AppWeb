@@ -18,11 +18,17 @@ jobs:
     - name: Update Time
       run: |
         cd AppWeb
-        ls
-        ls app
         echo $(TZ=UTC-8 date +%Y-%m-%d" "%H:%M:%S) > app/updateTime.txt
        
-    - uses: stefanzweifel/git-auto-commit-action@v4
-      with:
-        commit_message: UpdateTime
     
+    - name: Delete conflict
+      run: |
+        git config --global user.email xiaowine0@gmail.com
+        git config --global user.name xiaowine
+        git add AppWeb/app/updateTime.txt
+        git commit -m "updateTime" -a
+
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ github.token }}
