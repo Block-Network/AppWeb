@@ -23,6 +23,7 @@ jobs:
     
     - name: Delete conflict
       run: |
+        cd AppWeb
         git config --global user.email xiaowine0@gmail.com
         git config --global user.name xiaowine
         git add AppWeb/app/updateTime.txt
